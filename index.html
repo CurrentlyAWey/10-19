@@ -8,13 +8,14 @@
         $("#first").click(function(){
           var birthYear = prompt("So what is your birth year?");
           var age = 2015 - birthYear;
+          var msg = 
           console.log(age);
-          $("$first").append("<h3> Seems like you're "+age+" years old. That seems, uhh, old enough.");
+          $("$first").append("<h3> Seems like you're "+age+" years old. That seems, uhh, old enough. </h3>");
         });
         $("#second").click(function(){
          var color = prompt("so what's your favorite color?");
          console.log("your favorite color is " + color);
-         
+
         });
       });
     </script>
