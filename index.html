@@ -4,73 +4,76 @@
 		<title>changing html with jquery</title>
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script>
-		$(document).ready(function(){
-		$("#first").click(function(){
-		var birthYear = prompt("So what is your birth year?");
-		var age = 2015 - birthYear;
-		var msg =
-		console.log(age);
-		$("#first").html("<h3> Seems like you're "+age+" years old. That seems, uhh, old enough. </h3>");
-		});
-		$("#second").click(function(){
-		var color = prompt("so what's your favorite color?");
-		console.log("your favorite color is " + color);
-		$("#second").append("<h3> Here's your poem</h3> <p>Roses are "+color+",</p><p>Violets are "+color+".</p><p> The world will die.</p>");
-		});
-		var colCh = prompt("change the color to this color! Choose from red, blue, or yellow");
-		if (colCh === "red")
-		{
-			$("html").css("background-color", "red");
-		}
-		else if (colCh === "blue"){
-			$("html").css("background-color", "blue");
-		}
-		else if (colCh === "yellow"){
-			$("html").css("background-color", "yellow");
-		}
-		else
-		{
-			$("html").css("background-color", "black");
-			$("html").append("<h2 id = \"mad\"> WTF BRO I SAID RED BLUE OR YELLOW </h2> ");
-			$("#mad").css("color","white");
-		}
-		function story(){
-			$("html").append("<button type='button' id='hey'> Click Me! </button>");
-			$('#hey').click(function(){
-			var var1 = prompt("do you like waffles? (y/n)");
-			})
-		if (var1.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+			$(document).ready(function(){
+			$("#first").click(function(){
+				var birthYear = prompt("So what is your birth year?");
+				var age = 2015 - birthYear;
+				var msg =
+				console.log(age);
+				$("#first").html("<h3> Seems like you're "+age+" years old. That seems, uhh, old enough. </h3>");
+			});
+			$("#second").click(function(){
+				var color = prompt("so what's your favorite color?");
+				console.log("your favorite color is " + color);
+				$("#second").append("<h3> Here's your poem</h3> <p>Roses are "+color+",</p><p>Violets are "+color+".</p><p> The world will die.</p>");
+			});
+			var colCh = prompt("change the color to this color! Choose from red, blue, or yellow");
+			if (colCh === "red")
 			{
-				$("html").append("<p>YEAH WE LIKE WAFFLES</p><button id ='swag1' type='button'>Next</button>");
+				$("html").css("background-color", "red");
 			}
-			else{
-				$("html").append("<p>play along D:</p><button id ='restart' type='button'>Restart</button>");
-			}
-						$('#swag1').click(function(){
-			var var2 = prompt("do you like french toast? (y/n)");
-				
-			})
-		if (var2.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+			else if (colCh === "blue")
 			{
-				$("html").append("<p>YEAH WE LIKE FRENCH TOAST</p><button id ='swag2' type='button'>Next</button>");
+				$("html").css("background-color", "blue");
 			}
-			else{
-				$("html").append("<p>play along D:</p><button id ='restart' type='button'>Restart</button>");
-			}
-						$('#swag2').click(function(){
-						var var3 = prompt("do you like pancakes? (y/n)");
-				
-			})
-		if (var1.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+			else if (colCh === "yellow")
 			{
-				$("html").append("<p>YEAH WE LIKE PANCAKES</p><button id ='swag3' type='button'>Next</button>");
+				$("html").css("background-color", "yellow");
 			}
-			else{
-				$("html").append("<p>play along D:</p><button id ='restart' type='button'>Restart</button>");
+			else
+			{
+				$("html").css("background-color", "black");
+				$("html").append("<h2 id = \"mad\"> WTF BRO I SAID RED BLUE OR YELLOW </h2> ");
+				$("#mad").css("color","white");
 			}
-		}
-		$("#restart").click(story());
-		});
+			$("html").append("<button class ='restart' type='button'>Start</button>");
+			function story(){
+				$("html").append("<button type='button' id='hey'> Click Me! </button>");
+				$('#hey').click(function(){
+				var var1 = prompt("do you like waffles? (y/n)");
+				})
+			if (var1.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+				{
+					$("html").append("<p>YEAH WE LIKE WAFFLES</p><button id ='swag1' type='button'>Next</button>");
+				}
+				else{
+					$("html").append("<p>play along D:</p><button class ='restart' type='button'>Restart</button>");
+				}
+							$('#swag1').click(function(){
+				var var2 = prompt("do you like french toast? (y/n)");
+					
+				})
+			if (var2.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+				{
+					$("html").append("<p>YEAH WE LIKE FRENCH TOAST</p><button id ='swag2' type='button'>Next</button>");
+				}
+				else{
+					$("html").append("<p>play along D:</p><button class = 'restart' type='button'>Restart</button>");
+				}
+							$('#swag2').click(function(){
+							var var3 = prompt("do you like pancakes? (y/n)");
+					
+				})
+			if (var1.toUpperCase() === "Y" || var1.toUpperCase() === "YES")
+				{
+					$("html").append("<p>YEAH WE LIKE PANCAKES</p><button id ='swag3' type='button'>Next</button>");
+				}
+				else{
+					$("html").append("<p>play along D:</p><button class ='restart' type='button'>Restart</button>");
+				}
+			}
+			$(".restart").click(story());
+			});
 		</script>
 		<style>
 		</style>
