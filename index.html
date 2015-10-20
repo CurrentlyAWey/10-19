@@ -17,6 +17,23 @@
          console.log("your favorite color is " + color);
          $("#second").append("<h3> Here's your poem</h3> <p>Roses are "+color+",</p><p>Violets are "+color+".</p><p> The world will die.</p>");
         });
+        var colCh = prompt("change the color to this color! Choose from red, blue, or yellow");
+        if (colCh === "red")
+        {
+	        $("html").css("background-color", "red");
+        }
+        else if (colCh === "blue"){
+        	$("html").css("background-color", "blue");
+        }
+        else if (colCh === "yellow"){
+        	$("html").css("background-color", "yellow");
+        }
+        else
+        {
+        	$("html").css("background-color", "black");
+        	$("html").append("<h2 id = \"mad\"> WTF BRO I SAID RED BLUE OR YELLOW </h2> ");
+        	$(#mad).css("color","white");
+        }
       });
     </script>
     <style>
